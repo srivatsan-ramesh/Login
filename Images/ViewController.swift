@@ -9,17 +9,17 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var email: UITextField!
+    @IBOutlet weak var password: UITextField!
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    
+    @IBAction func buttonPressed(sender: UIButton) {
+        self.email.resignFirstResponder()
+        self.password.resignFirstResponder()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+        self.view.endEditing(true)
     }
-
-
 }
 
